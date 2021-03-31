@@ -1,0 +1,7 @@
+type: object
+additionalProperties:
+  description: The event source
+  type: array
+  items:
+    type: string
+    description: The source event types

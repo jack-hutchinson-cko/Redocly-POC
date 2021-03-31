@@ -1,0 +1,11 @@
+type: reference-docs
+definitionId: nasCheckout
+settings:
+  pagination: section
+  showConsole: true
+  jsonSampleExpandLevel: 'all'
+  generateCodeSamples:
+    languages:
+      - lang: curl
+      - lang: JavaScript
+      - lang: Node.js

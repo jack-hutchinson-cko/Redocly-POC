@@ -13,8 +13,8 @@ You can find a list of request body parameters and possible outcomes <Link to="h
 
 ```js
 const disputes = await cko.disputes.get({
-    limit: 5,
-    id: 'dsp_bc94ebda8d275i461229'
+	limit: 5,
+	id: 'dsp_bc94ebda8d275i461229',
 });
 ```
 
@@ -34,7 +34,7 @@ const accept = await cko.disputes.accept('dsp_bc94ebda8d275i461229');
 
 ```js
 const evidence = await cko.disputes.provideEvidence('dsp_bc94ebda8d275i461229', {
-    proof_of_delivery_or_service_text: 'http://checkout.com/document.pdf'
+	proof_of_delivery_or_service_text: 'http://checkout.com/document.pdf',
 });
 ```
 

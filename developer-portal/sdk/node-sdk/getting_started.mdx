@@ -19,20 +19,17 @@ The Checkout.com Node.JS SDK makes it easy to interact with the Unified Payments
 
 If you are starting the integration process, and you want to start interacting with Checkout.com's API, you will need a test account, so you can get your API keys.
 
-
-<a href="https://www.checkout.com/get-test-account" target="_blank" className="get-test-account">Get a test account</a>
-
+<a href="https://www.checkout.com/get-test-account" target="_blank" className="get-test-account">
+	Get a test account
+</a>
 
 ## Authentication
-
 
 When you sign up for an account, you are given a secret and public API key pair. They will be used to initialise the SDK so you can interact with the various endpoints. You can find the keys by navigating to the Checkout.com's Hub Settings > Channels > API keys Section.
 
 Unless required, most of the endpoints covered by the SDK only need the secret key, without the public key. If you do not use one of those endpoints that require the public key, you do not have to specify it when initializing the SDK.
 
-<Information type="warning">
-  Never share your secret keys. Keep them guarded and secure.
-</Information>
+<Information type="warning">Never share your secret keys. Keep them guarded and secure.</Information>
 
 ## Payload and Responses
 

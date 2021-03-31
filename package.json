@@ -1,82 +1,86 @@
 {
-  "name": "checkout-com-developer-portal",
-  "private": true,
-  "version": "0.0.1",
-  "description": "Checkout.coms developer portal",
-  "license": "MIT",
-  "scripts": {
-    "start": "node ./scripts/build.js && redocly-portal develop -p 3000",
-    "build": "redocly-portal build",
-    "clean": "redocly-portal clean",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test": "jest",
-    "test-coverage": "jest --coverage",
-    "test-watch": "jest --watch",
-    "validate-schema": "swagger-cli validate --no-schema openapi/swagger.yaml"
-  },
-  "dependencies": {
-    "@redocly/developer-portal": "1.0.0-beta.120",
-    "styled-components": "^5.2.1",
-    "swagger-cli": "4.0.4",
-    "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/plugin-syntax-jsx": "^7.12.13",
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-react": "^7.12.13",
-    "@babel/preset-typescript": "^7.13.0",
-    "@storybook/addon-actions": "^6.1.21",
-    "@storybook/addon-controls": "^6.1.21",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-links": "^6.1.21",
-    "@storybook/react": "^6.1.21",
-    "@types/enzyme": "^3.10.6",
-    "@types/enzyme-adapter-react-16": "^1.0.3",
-    "@types/enzyme-to-json": "^1.5.3",
-    "@types/jest": "^26.0.13",
-    "@types/styled-components": "^5.1.9",
-    "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.4",
-    "enzyme-to-json": "^3.5.0",
-    "husky": "4.3.8",
-    "jest": "^26.6.3",
-    "jest-styled-components": "^7.0.3",
-    "lint-staged": "^10.5.4",
-    "storybook": "^6.1.21"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,yaml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "jest": {
-	"setupFilesAfterEnv": ["<rootDir>/components/setupTests.ts"],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "coverageDirectory": "coverage",
-    "testEnvironment": "node"
-  },
-  "prettier": {
-    "printWidth": 120,
-    "tabWidth": 2,
-    "useTabs": true,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "bracketSpacing": true,
-    "jsxBracketSameLine": false,
-    "fluid": false
-  }
+	"name": "checkout-com-developer-portal",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Checkout.coms developer portal",
+	"license": "MIT",
+	"scripts": {
+		"start": "redocly-portal develop -p 3000",
+		"build": "redocly-portal build",
+		"clean": "redocly-portal clean",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook",
+		"test": "jest",
+		"test-coverage": "jest --coverage",
+		"test-watch": "jest --watch",
+		"validate-schemas": "yarn validate-abc-schema; yarn validate-nas-schema",
+		"validate-abc-schema": "swagger-cli validate --no-schema openapi/abc-swagger.yaml",
+		"validate-nas-schema": "swagger-cli validate --no-schema openapi/nas-swagger.yaml"
+	},
+	"dependencies": {
+		"@redocly/developer-portal": "1.0.0-beta.120",
+		"styled-components": "^5.2.1",
+		"swagger-cli": "4.0.4",
+		"ts-jest": "^26.5.4",
+		"typescript": "^4.2.3"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.13.10",
+		"@babel/plugin-syntax-jsx": "^7.12.13",
+		"@babel/preset-env": "^7.13.12",
+		"@babel/preset-react": "^7.12.13",
+		"@babel/preset-typescript": "^7.13.0",
+		"@storybook/addon-actions": "^6.1.21",
+		"@storybook/addon-controls": "^6.1.21",
+		"@storybook/addon-essentials": "^6.1.21",
+		"@storybook/addon-links": "^6.1.21",
+		"@storybook/react": "^6.1.21",
+		"@types/enzyme": "^3.10.6",
+		"@types/enzyme-adapter-react-16": "^1.0.3",
+		"@types/enzyme-to-json": "^1.5.3",
+		"@types/jest": "^26.0.13",
+		"@types/styled-components": "^5.1.9",
+		"babel-jest": "^26.6.3",
+		"babel-loader": "^8.2.2",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.4",
+		"enzyme-to-json": "^3.5.0",
+		"husky": "4.3.8",
+		"jest": "^26.6.3",
+		"jest-styled-components": "^7.0.3",
+		"lint-staged": "^10.5.4",
+		"storybook": "^6.1.21"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx,yaml}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"<rootDir>/components/setupTests.ts"
+		],
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		],
+		"coverageDirectory": "coverage",
+		"testEnvironment": "node"
+	},
+	"prettier": {
+		"printWidth": 120,
+		"tabWidth": 2,
+		"useTabs": true,
+		"semi": true,
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"bracketSpacing": true,
+		"jsxBracketSameLine": false,
+		"fluid": false
+	}
 }

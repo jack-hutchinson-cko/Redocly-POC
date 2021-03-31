@@ -1,0 +1,73 @@
+openapi: '3.0.1'
+info:
+  version: '1.0.0'
+  title: Checkout.com API Reference
+  x-logo:
+    url: 'https://assets.checkout.com/docs/logos/logo-checkout-api-dark.svg'
+    backgroundColor: '#E6E7EC'
+    altText: 'Checkout.com API logo'
+  contact:
+    name: Checkout.com Support
+    url: 'https://checkout.com'
+    email: support@checkout.com
+  license:
+    name: Checkout.com
+    url: 'https://checkout.com/api/license/'
+  termsOfService: 'https://checkout.com/terms/'
+  description: >
+    # Introduction
+
+    Checkout.com provides a collection of APIs that enable you to process and manage payments.  
+
+    Our APIs accept and return JSON in the HTTP body and return HTTP response codes to indicate errors.
+    You can consume the APIs directly using your favorite HTTP/REST library or, if you'd like to make use of one of our SDKs, please let our Integration team know at <a href="mailto:integration@checkout.com" target="_blank">integration@checkout.com</a>.  
+
+
+    Our unified payments API allows you to accept payments, as well as pay out to a variety of destinations, all using the same integration. 
+
+
+    And with our workflow management, events and disputes APIs, you can keep on top of your transactions and react to any chargebacks, keeping your business running smoothly. 
+
+    # Authentication
+
+    When you sign up for an account, you are given a public API key, and an access key ID and secret for OAuth 2.0. You authenticate with our API by following the appropriate authentication flow, using either your API keys or your access key credentials.
+
+
+    Unless explicitly stated, all endpoints require authentication using OAuth. Public keys should only be used in JavaScript or native applications.
+
+
+    Never share your access key credentials or access tokens. Keep them guarded and secure.
+
+servers:
+  - url: https://api.checkout.com
+    description: Live API
+  - url: https://api.sandbox.checkout.com
+    description: Sandbox API
+tags:
+  - name: Access
+  - name: Payments
+    description: Process and manage payments from a variety of sources and to various destinations all within one integration.
+  # - name: Sources
+  #   description: Create a payment source for a customer that you can use for one or more payments.
+  - name: Tokens
+    description: Create a token that represents a card's details that you can later use to request a payment, without you having to process or store any sensitive information.
+  - name: Instruments
+    description: Capture your customers’ bank account information and securely store it in the Vault to use for future payouts.
+  - name: Forex
+    description: Checkout.com Foreign Exchange services
+  - name: Disputes
+    description: Keep track of and act on your open disputes (also known as chargebacks) to submit the best possible response.
+  - name: Marketplace
+    description: Manage all your sub-entities (also known as sub-merchants) through one integration, globally.
+  - name: Sessions
+    description: Use Sessions to authenticate transactions with 3D Secure (3DS) and comply with Strong Customer Authentication (SCA) requirements.
+  - name: Workflows
+    description: Use Workflows to start receiving webhook notifications for your payments, disputes, and marketplace sub-entities.
+  # - name: Files
+  #   description: |
+  #     Upload files to be used as input to other APIs
+# x-tagGroups:
+# - name: Flow
+#   tags:
+#     - Events
+#     - Workflows

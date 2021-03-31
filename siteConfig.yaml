@@ -5,7 +5,8 @@ meta:
 headerIcon: ./assets/images/logo.svg
 enableToc: true
 oasDefinitions:
-  checkout: ./openapi/swagger.yaml
+  abcCheckout: ./openapi/abc-swagger.yaml
+  nasCheckout: ./openapi/nas-swagger.yaml
 
 stylesheets:
   - ./assets/global.css

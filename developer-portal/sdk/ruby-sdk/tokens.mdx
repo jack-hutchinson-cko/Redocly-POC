@@ -34,12 +34,12 @@ puts(response.body) # => "..."
 ## Request a token for Google Pay
 
 const token = await cko.tokens.request({
-    // type:"googlepay" is inferred
-    token_data: {
-        protocolVersion: 'EC_v1',
-        signature: 'XXX',
-        signedMessage: 'XXX'
-    }
+// type:"googlepay" is inferred
+token_data: {
+protocolVersion: 'EC_v1',
+signature: 'XXX',
+signedMessage: 'XXX'
+}
 });
 
 ```ruby
@@ -59,9 +59,11 @@ puts(response.body) # => "..."
 
 ## Request a token for raw card details
 
-
 <Information type="warning">
-    If you do not have SAQ-D level PCI Compliance, this interaction can only be done in the Sandbox environment. This is in case you want to unit test your code and need a token to make a payment. In the Production environment, you need to use an integrated solution such as **[Frames](https://docs.checkout.com/quickstart/integrate/frames)** to generate the token for you.
+	If you do not have SAQ-D level PCI Compliance, this interaction can only be done in the Sandbox environment. This is
+	in case you want to unit test your code and need a token to make a payment. In the Production environment, you need to
+	use an integrated solution such as **[Frames](https://docs.checkout.com/quickstart/integrate/frames)** to generate the
+	token for you.
 </Information>
 
 ```ruby

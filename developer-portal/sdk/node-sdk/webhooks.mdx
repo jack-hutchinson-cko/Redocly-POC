@@ -19,13 +19,13 @@ const webhooks = await cko.webhooks.retrieveWebhooks();
 
 ```js
 const webhook = await cko.webhooks.registerWebhook({
-    url: 'https://example.com/webhook',
-    active: true,
-    headers: {
-        authorization: '1234'
-    },
-    content_type: 'json',
-    event_types: ['payment_approved', 'payment_captured']
+	url: 'https://example.com/webhook',
+	active: true,
+	headers: {
+		authorization: '1234',
+	},
+	content_type: 'json',
+	event_types: ['payment_approved', 'payment_captured'],
 });
 ```
 
@@ -39,13 +39,13 @@ const webhook = await cko.webhooks.retrieveWebhook('wh_tdt72zlbe7cudogxdgit6nwk6
 
 ```js
 const webhook = await cko.webhooks.updateWebhook('wh_ahun3lg7bf4e3lohbhni65335u', {
-    url: 'https://example.com/webhooks/updated',
-    active: true,
-    headers: {
-        authorization: '1234'
-    },
-    content_type: 'json',
-    event_types: ['payment_approved', 'payment_captured']
+	url: 'https://example.com/webhooks/updated',
+	active: true,
+	headers: {
+		authorization: '1234',
+	},
+	content_type: 'json',
+	event_types: ['payment_approved', 'payment_captured'],
 });
 ```
 
@@ -53,7 +53,7 @@ const webhook = await cko.webhooks.updateWebhook('wh_ahun3lg7bf4e3lohbhni65335u'
 
 ```js
 const webhook = await cko.webhooks.partiallyUpdateWebhook('wh_ahun3lg7bf4e3lohbhni65335u', {
-    url: 'https://example.com/webhooks/updated'
+	url: 'https://example.com/webhooks/updated',
 });
 ```
 

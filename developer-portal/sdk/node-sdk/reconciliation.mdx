@@ -9,13 +9,12 @@ import { Information, Link } from '../../../components';
 
 You can find a list of request body parameters and possible outcomes <Link to="https://api-reference.checkout.com/#tag/Reconciliation">here</Link>.
 
-
 ## Get JSON payments report
 
 ```js
 const reconciliation = await cko.reconciliation.getPayments({
-    from: '2019-05-17T16:48:52Z',
-    to: '2019-06-17T16:48:52Z',
+	from: '2019-05-17T16:48:52Z',
+	to: '2019-06-17T16:48:52Z',
 });
 ```
 
@@ -25,25 +24,24 @@ The API response can be paginated, either by you setting the "limit" parameter, 
 Here you have an example of how you would handle the pagination:
 
 <Information type="note">
-In case the API response contains a next page, the page identifier will be injected in the response object as "page".
-You can then use that value in a subsequent call to move to the next page. (by using the "after" parameter)
+	In case the API response contains a next page, the page identifier will be injected in the response object as "page".
+	You can then use that value in a subsequent call to move to the next page. (by using the "after" parameter)
 </Information>
-
 
 ```js
 let page;
 
 // Iterate until there is no longer a page to go to
 do {
-    const reconciliation = await cko.reconciliation.getPayments({
-        from: '2020-07-07T17:51:42Z',
-        to: '2020-07-07T17:51:59Z',
-        limit: 10,
-        after: page, // in case you saw a page already, skip it
-    });
-    // the next page you can go to
-    page = reconciliation.page;
-    console.log(reconciliation);
+	const reconciliation = await cko.reconciliation.getPayments({
+		from: '2020-07-07T17:51:42Z',
+		to: '2020-07-07T17:51:59Z',
+		limit: 10,
+		after: page, // in case you saw a page already, skip it
+	});
+	// the next page you can go to
+	page = reconciliation.page;
+	console.log(reconciliation);
 } while (page);
 ```
 
@@ -57,21 +55,19 @@ const reconciliation = await cko.reconciliation.getPayment('pay_nezg6bx2k22utmk4
 
 ```js
 const reconciliation = await cko.reconciliation.getPaymentsCsv({
-    from: '2019-05-17T16:48:52Z',
-    to: '2019-06-17T16:48:52Z',
+	from: '2019-05-17T16:48:52Z',
+	to: '2019-06-17T16:48:52Z',
 });
 ```
 
-<Information type="note">
-    This API call returns a Buffer.
-</Information>
+<Information type="note">This API call returns a Buffer.</Information>
 
 ## Get JSON statements report
 
 ```js
 const statements = await cko.reconciliation.getStatements({
-    from: '2019-05-17T16:48:52Z',
-    to: '2019-06-17T16:48:52Z',
+	from: '2019-05-17T16:48:52Z',
+	to: '2019-06-17T16:48:52Z',
 });
 ```
 
@@ -81,16 +77,14 @@ const statements = await cko.reconciliation.getStatements({
 const statement = await cko.reconciliation.getStatementCsv('155613B100981');
 ```
 
-<Information type="note">
-    This API call returns a Buffer.
-</Information>
+<Information type="note">This API call returns a Buffer.</Information>
 
 ## Get Payments Actions
 
 ```js
 const reconciliation = await cko.reconciliation.getPaymentsActions({
-    requested_from: '2020-08-17T16:48:52Z',
-    requested_to: '2020-09-17T16:48:52Z',
+	requested_from: '2020-08-17T16:48:52Z',
+	requested_to: '2020-09-17T16:48:52Z',
 });
 ```
 
@@ -104,14 +98,12 @@ const reconciliation = await cko.reconciliation.getPaymentsAction('act_guvhr46cw
 
 ```js
 const reconciliation = await cko.reconciliation.getPaymentsActionsCsv({
-    requested_from: '2020-08-17T16:48:52Z',
-    requested_to: '2020-09-17T16:48:52Z',
+	requested_from: '2020-08-17T16:48:52Z',
+	requested_to: '2020-09-17T16:48:52Z',
 });
 ```
 
-<Information type="note">
-    This API call returns a Buffer.
-</Information>
+<Information type="note">This API call returns a Buffer.</Information>
 
 ## Get Action
 
@@ -125,12 +117,12 @@ Here you have an example of an Express route that will trigger the CSV download 
 
 ```js
 app.get('/getCsv', async (req, res) => {
-    const csv = await cko.reconciliation.getPaymentsCsv({
-        from: '2019-05-17T16:48:52Z',
-        to: '2019-07-17T16:48:52Z',
-    });
-    res.setHeader('Content-disposition', `attachment; filename=Payments.csv`);
-    res.set('Content-Type', 'text/csv');
-    res.end(csv, 'binary');
+	const csv = await cko.reconciliation.getPaymentsCsv({
+		from: '2019-05-17T16:48:52Z',
+		to: '2019-07-17T16:48:52Z',
+	});
+	res.setHeader('Content-disposition', `attachment; filename=Payments.csv`);
+	res.set('Content-Type', 'text/csv');
+	res.end(csv, 'binary');
 });
 ```

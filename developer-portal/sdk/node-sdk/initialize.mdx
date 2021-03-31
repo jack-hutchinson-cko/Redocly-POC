@@ -3,15 +3,14 @@ id: initialize
 title: Initialize
 ---
 
-import { Information, Link } from '../../../components'
+import { Information, Link } from '../../../components';
 
 # Initialization
 
-
 <Information type="information">
-    If you use environment variables, the SDK will pick the keys up when they are set as >CKO_SECRET_KEY and >CKO_PUBLIC_KEY
+	If you use environment variables, the SDK will pick the keys up when they are set as >CKO_SECRET_KEY and
+	>CKO_PUBLIC_KEY
 </Information>
-
 
 ## With environment variables
 
@@ -35,7 +34,7 @@ const cko = new Checkout('sk_XXXX', { pk: 'pk_XXX', timeout: 7000 });
 
 ```js
 const http = require('http');
-const keepAliveAgent = new http.Agent({ keepAlive: true })
+const keepAliveAgent = new http.Agent({ keepAlive: true });
 
 const cko = new Checkout('sk_XXXX', { agent: keepAliveAgent });
 ```

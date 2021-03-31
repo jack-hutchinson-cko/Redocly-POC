@@ -1,279 +1,322 @@
 :root {
-    --R10: #FFF8F7;
-    --R500: #E8220C;
-    --R800: #CC4B3D;
-    --G20: #E4F4F0;
-    --G500: #00B48F;
-    --G700: #009E7E;
-    --S00: #FFFFFF;
-    --S05: #E6E7EC;
-    --S10: #CECFD9;
-    --S20: #B6B8C6;
-    --S90: #9EA0B4;
-    --S100: #8688A0;
-    --S300: #6D708E;
-    --S500: #55587B;
-    --S700: #3D4168;
-    --S800: #242955;
-    --S1000: #0C1142;
-    --Y10: #FFFFF4;
-    --Y20: #FFFFEE;
-    --Y30: #FFFFE9;
-    --Y40: #FFFFE3;
-    --Y50: #FFFFDE;
-    --Y60: #FFFFD8;
-    --Y70: #FFFFD3;
-    --Y80: #FFFFCE;
-    --Y500: #F3C25D;
-    --T10: #D5F6F8;
-    --T20: #C0F2F4;
-    --T40: #AAEEF1;
-    --T60: #95EAED;
-    --T80: #80E5E9;
-    --T100: #6BE1E6;
-    --T200: #55DDE2;
-    --T300: #40D8DF;
-    --T500: #3AB9F4;
-    --B500: #0082D9;
-    --P10: #F5F5FC;
-    --P600: #6964B3;
-    --yellow: #FAB82B;
-    --note: #F3C25D;
-    --information: #80E5E9;
-    --tip: #70C9B7;
-    --warning: #EE6D5F;
+	--R10: #fff8f7;
+	--R500: #e8220c;
+	--R800: #cc4b3d;
+	--G20: #e4f4f0;
+	--G500: #00b48f;
+	--G700: #009e7e;
+	--S00: #ffffff;
+	--S05: #e6e7ec;
+	--S10: #cecfd9;
+	--S20: #b6b8c6;
+	--S90: #9ea0b4;
+	--S100: #8688a0;
+	--S300: #6d708e;
+	--S500: #55587b;
+	--S700: #3d4168;
+	--S800: #242955;
+	--S1000: #0c1142;
+	--Y10: #fffff4;
+	--Y20: #ffffee;
+	--Y30: #ffffe9;
+	--Y40: #ffffe3;
+	--Y50: #ffffde;
+	--Y60: #ffffd8;
+	--Y70: #ffffd3;
+	--Y80: #ffffce;
+	--Y500: #f3c25d;
+	--T10: #d5f6f8;
+	--T20: #c0f2f4;
+	--T40: #aaeef1;
+	--T60: #95eaed;
+	--T80: #80e5e9;
+	--T100: #6be1e6;
+	--T200: #55dde2;
+	--T300: #40d8df;
+	--T500: #3ab9f4;
+	--B500: #0082d9;
+	--P10: #f5f5fc;
+	--P600: #6964b3;
+	--yellow: #fab82b;
+	--note: #f3c25d;
+	--information: #80e5e9;
+	--tip: #70c9b7;
+	--warning: #ee6d5f;
 
-    /* light */
-    --background: white;
-    --footer-background: var(--S1000);
-    --header-background: white;
-    --font-color: var(--S1000);
-    --secondary-font-color: var(--S700);
-    --icon-fill: var(--S300);
-    --header-icon-fill: var(--S1000);
-    --toggle-color: var(--S1000);
-    --toggle-circle: white;
-    --btn-primary-bg: var(--S1000);
-    --btn-primary-hover-bg: rgb(61, 65, 104);
-    --btn-primary-font: #FFFFC8;
-    --btn-secondary-background: #2BD4DB;
-    --btn-secondary-font: var(--S1000);
-    --btn-secondary-hover: rgb(107, 225, 230);
-    --btn-tertiary-background: #2BD4DB;
-    --btn-tertiary-hover: rgb(107, 225, 230);
-    --btn-tertiary-font: var(--S1000);
-    --card-link-hover: #2BD4DB;
-    --logo-icon-fill: white;
-    --border: var(--S05);
-    --test-account-background: rgb(230, 231, 236);
-    --code-background: var(--S05);
-  }
-
-@font-face {
-    font-family: 'Graphik LCG Web';
-    src: url('./fonts/Graphik-Medium-Cy-Gr-Web.woff2') format('woff2'),
-         url('./fonts/Graphik-Medium-Cy-Gr-Web.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-}
-  
-@font-face {
-    font-family: 'Graphik LCG Web';
-    src: url('./fonts/Graphik-RegularItalic-Cy-Gr-Web.woff2') format('woff2'),
-            url('./fonts/Graphik-RegularItalic-Cy-Gr-Web.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-    font-stretch: normal;
+	/* light */
+	--background: white;
+	--footer-background: var(--S1000);
+	--header-background: white;
+	--font-color: var(--S1000);
+	--secondary-font-color: var(--S700);
+	--icon-fill: var(--S300);
+	--header-icon-fill: var(--S1000);
+	--toggle-color: var(--S1000);
+	--toggle-circle: white;
+	--btn-primary-bg: var(--S1000);
+	--btn-primary-hover-bg: rgb(61, 65, 104);
+	--btn-primary-font: #ffffc8;
+	--btn-secondary-background: #2bd4db;
+	--btn-secondary-font: var(--S1000);
+	--btn-secondary-hover: rgb(107, 225, 230);
+	--btn-tertiary-background: #2bd4db;
+	--btn-tertiary-hover: rgb(107, 225, 230);
+	--btn-tertiary-font: var(--S1000);
+	--card-link-hover: #2bd4db;
+	--logo-icon-fill: white;
+	--border: var(--S05);
+	--test-account-background: rgb(230, 231, 236);
+	--code-background: var(--S05);
 }
 
 @font-face {
-    font-family: 'Graphik LCG Web';
-    src: url('./fonts/Graphik-Regular-Cy-Gr-Web.woff2') format('woff2'),
-            url('./fonts/Graphik-Regular-Cy-Gr-Web.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
+	font-family: 'Graphik LCG Web';
+	src: url('./fonts/Graphik-Medium-Cy-Gr-Web.woff2') format('woff2'),
+		url('./fonts/Graphik-Medium-Cy-Gr-Web.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Graphik LCG Web';
+	src: url('./fonts/Graphik-RegularItalic-Cy-Gr-Web.woff2') format('woff2'),
+		url('./fonts/Graphik-RegularItalic-Cy-Gr-Web.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'Graphik LCG Web';
+	src: url('./fonts/Graphik-Regular-Cy-Gr-Web.woff2') format('woff2'),
+		url('./fonts/Graphik-Regular-Cy-Gr-Web.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
 }
 
 .dark {
-    --background: #090C30;
-    --footer-background: #000321;
-    --header-background: #090C30;
-    --card-background: #000321;
-    --font-color: white;
-    --secondary-font-color: var(--S10);
-    --toggle-color: var(--S500);
-    --icon-fill: white;
-    --header-icon-fill: white;
-    --toggle-circle: #090C30;
-    --btn-primary-bg: #FFFFC8;
-    --btn-primary-hover-bg: rgb(255, 255, 216);
-    --btn-primary-font:  var(--S1000);
-    --btn-secondary-background: #FFFFC8;
-    --btn-secondary-hover: rgb(255, 255, 216);
-    --btn-secondary-font: var(--S1000);
-    --btn-tertiary-background: #FFFFC8;
-    --btn-tertiary-font: var(--S1000);
-    --btn-tertiary-hover: rgb(107, 225, 230);
-    --card-link-hover: #FFFFC8;
-    --logo-icon-fill: white;
-    --border: var(--S700);
-    --test-account-background: #000321;
-    --code-background: var(--S10);
+	--background: #090c30;
+	--footer-background: #000321;
+	--header-background: #090c30;
+	--card-background: #000321;
+	--font-color: white;
+	--secondary-font-color: var(--S10);
+	--toggle-color: var(--S500);
+	--icon-fill: white;
+	--header-icon-fill: white;
+	--toggle-circle: #090c30;
+	--btn-primary-bg: #ffffc8;
+	--btn-primary-hover-bg: rgb(255, 255, 216);
+	--btn-primary-font: var(--S1000);
+	--btn-secondary-background: #ffffc8;
+	--btn-secondary-hover: rgb(255, 255, 216);
+	--btn-secondary-font: var(--S1000);
+	--btn-tertiary-background: #ffffc8;
+	--btn-tertiary-font: var(--S1000);
+	--btn-tertiary-hover: rgb(107, 225, 230);
+	--card-link-hover: #ffffc8;
+	--logo-icon-fill: white;
+	--border: var(--S700);
+	--test-account-background: #000321;
+	--code-background: var(--S10);
 }
 
 html {
-    font-family: "Graphik LCG Web", Arial, sans-serif;
+	font-family: 'Graphik LCG Web', Arial, sans-serif;
 }
 
 header a {
-    color: var(--font-color)!important;
+	color: var(--font-color) !important;
 }
 
 footer a {
-    color: var(--S20);
+	color: var(--S20);
 }
 
-pre {
-    background-color: var(--code-background);
-}
+
+
+
 
 aside {
-    background-color: var(--background)!important;
-    border-right: none!important;
-    color: var(--font-color)!important;
+	background-color: var(--background) !important;
+	border-right: none !important;
+	color: var(--font-color) !important;
 }
 
 #___gatsby {
-    background-color: var(--background);
-    color: var(--font-color)!important;
+	background-color: var(--background);
+	color: var(--font-color) !important;
 }
 
-aside span, aside div, aside i {
-    background-color: var(--background)!important;
-    color: var(--font-color)!important;
-    transition: none!important;
+aside span,
+aside div,
+aside i {
+	background-color: var(--background) !important;
+	color: var(--font-color) !important;
+	transition: none !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, li {
-    color: var(--font-color)!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li {
+	color: var(--font-color) !important;
 }
 
 /* Code overrides */
 
-.token.property.string, .tab-error, .collapser {
-    color: var(--S1000)!important;
+.token.property.string,
+.tab-error,
+.collapser {
+	color: var(--S1000) !important;
 }
 
 .token.boolean {
-    color: var(--G500)!important;
+	color: var(--G500) !important;
 }
 
-.token.keyword, .token.class-name {
-    color: var(--R800)!important;
+.token.keyword,
+.token.class-name {
+	color: var(--R800) !important;
 }
 
-.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted, .token.string + a {
-    color: var(--P600)!important;
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.string + a {
+	color: var(--P600) !important;
+}
+
+.token.function,
+.token.comment,
+.token.punctuation,
+.token.operator {
+	color: var(--S1000) !important;
 }
 
 .token.number {
-    color: var(--B500)!important;
+	color: var(--B500) !important;
 }
 
 .boFvsO {
-    color: var(--S1000);
-    font-weight: 500;
+	color: var(--S1000);
+	font-weight: 500;
 }
 
 .kzHWse {
-    color: var(--Y80);
-    font-weight: 500;
+	color: var(--Y80);
+	font-weight: 500;
 }
 
-[data-cy="try-it"] {
-    color: var(--Y80)!important;
-    font-weight: 500;
+[data-cy='try-it'] {
+	color: var(--Y80) !important;
+	font-weight: 500;
 }
 
-[data-cy="next-to"] {
-    background-color: var(--btn-primary-bg)!important;
-    border: none!important;
-    border-radius: 8px!important;
-    color: var(--btn-primary-font)!important;
+[data-cy='next-to'] {
+	background-color: var(--btn-primary-bg) !important;
+	border: none !important;
+	border-radius: 8px !important;
+	color: var(--btn-primary-font) !important;
 }
 
-[type="post"] {
-    background-color: var(--T500)!important;
+[type='post'] {
+	background-color: var(--T500) !important;
+	color: white!important;
 }
-[type="get"] {
-    background-color: var(--G500)!important;
+[type='get'] {
+	background-color: var(--G500) !important;
+	color: white!important;
 }
-[type="options"] {
-    background-color: #b77ba1!important;
+[type='options'] {
+	background-color: #b77ba1 !important;
+	color: white!important;
 }
-[type="put"] {
-    background-color: var(--P600)!important;
+[type='put'] {
+	background-color: var(--P600) !important;
+	color: white!important;
 }
-[type="delete"] {
-    background-color: var(--R500)!important;
+[type='delete'] {
+	background-color: var(--R500) !important;
+	color: white!important;
 }
-[type="patch"] {
-    background-color: var(--yellow)!important;
+[type='patch'] {
+	background-color: var(--yellow) !important;
+	color: white!important;
 }
 
-.dDnGks, .fIoQcn {
-    background-color: var(--border)!important;
+.dDnGks,
+.fIoQcn {
+	background-color: var(--border) !important;
 }
 
-.fIoQcn span, .collapsible div, .fIoQc li {
-    color: var(--S1000)!important;
+.fIoQcn span,
+.collapsible div,
+.fIoQc li {
+	color: var(--S1000) !important;
 }
 
 polygon {
-    fill: var(--S1000)!important;
-} 
-
-.tab-success, ul > li.react-tabs__tab--selected {
-    color: var(--btn-primary-font)!important;
-    background: var(--btn-primary-bg)!important;
+	fill: var(--S1000) !important;
 }
 
-.react-tabs__tab {
-    border-radius: 8px;
-    color: var(--S1000)!important;
+.tab-success,
+ul > li.react-tabs__tab--selected {
+	color: var(--btn-primary-font) !important;
+	background: var(--btn-primary-bg) !important;
+}
+
+.react-tabs__tab-panel {
+	background: var(--S10);
+	border-radius: 8px;
+	color: var(--S1000)!important;
+	margin-top: 8px;
 }
 
 .jZSkJr {
-    background: var(--background)!important;
+	background: var(--background) !important;
 }
 
-.gxPHEs, .jFldoa {
-    background: var(--btn-primary-bg)!important;
-    color: var(--btn-primary-font)!important;
+.gxPHEs,
+.jFldoa {
+	background: var(--btn-primary-bg) !important;
+	color: var(--btn-primary-font) !important;
 }
 
 footer a > div {
-    color: var(--S20)!important;
+	color: var(--S20) !important;
 }
 
-.sc-ipXKqB, .sc-likbZx {
-    background-color: var(--border)!important;
+.sc-ipXKqB,
+.sc-likbZx {
+	background-color: var(--border) !important;
 }
 
-.react-tabs__tab-panel span, .sc-hwcHae {
-    color: var(--S1000)!important;
+.react-tabs__tab-panel span,
+.sc-hwcHae {
+	color: var(--S1000) !important;
 }
 
 table div {
-    background: var(--background)!important;
+	background: var(--background) !important;
 }
 
-span::before, span::after {
-    color: var(--border)!important;
+span::before,
+span::after {
+	color: var(--border) !important;
 }
 
 button {
-    border-radius: 8px;
+	border-radius: 8px;
 }
