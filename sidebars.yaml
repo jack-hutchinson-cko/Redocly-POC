@@ -3,10 +3,10 @@ checkout:
     page: developer-portal/docs/index.mdx
     expanded: false
     pages:
-      - page: developer-portal/docs/integrate.mdx
-        separator: Payments
-      - page: developer-portal/docs/request-payments.mdx
-  - page: openapi/swagger-reference.page.yaml
+      - page: developer-portal/docs/index.mdx
+        separator: Secondary page
+      - page: developer-portal/docs/secondary.mdx
+  - page: developer-portal/api/swagger-reference.page.yaml
   - group: SDKs
     page: developer-portal/sdk/index.mdx
     expanded: false
@@ -79,12 +79,3 @@ checkout:
             page: developer-portal/sdk/node-sdk/reconciliation.mdx
           - label: Disputes
             page: developer-portal/sdk/node-sdk/disputes.mdx
-
-fourSidebar:
-  - group: NAS Guides
-    expanded: false
-    pages:
-      - label: NAS Getting started
-        page: developer-portal/four/index.mdx
-      - label: Second page
-        page: developer-portal/four/secondary.mdx

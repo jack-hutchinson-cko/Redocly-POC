@@ -13,7 +13,7 @@
     "test": "jest",
     "test-coverage": "jest --coverage",
     "test-watch": "jest --watch",
-    "validate-schema": "swagger-cli validate --no-schema openapi/swagger.yaml"
+    "validate-schema": "swagger-cli validate --no-schema developer-portal/api/swagger.yaml"
   },
   "dependencies": {
     "@redocly/developer-portal": "1.0.0-beta.120",

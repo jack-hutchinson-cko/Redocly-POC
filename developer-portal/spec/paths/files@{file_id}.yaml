@@ -1,10 +1,12 @@
 get:
-  security:
-    - ApiSecretKey: []
   tags:
     - Disputes
+  security: 
+    - OAuth: 
+      - disputes
+      - disputes:view
+    # - ApiKey: []
   summary: Get file information
-  operationId: getFileInformation
   description: Retrieve information about a file that was previously uploaded.
   parameters:
     - in: path
