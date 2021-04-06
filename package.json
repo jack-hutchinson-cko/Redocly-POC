@@ -2,7 +2,7 @@
   "name": "checkout-com-developer-portal",
   "private": true,
   "version": "0.0.1",
-  "description": "Checkout.coms developer portal",
+  "description": "Checkout.com's developer portal",
   "license": "MIT",
   "scripts": {
     "start": "node ./scripts/build.js && redocly-portal develop -p 3000",
