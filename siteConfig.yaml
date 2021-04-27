@@ -17,7 +17,7 @@ scripts:
 nav:
   - search: true
   - label: Log in
-    page: developer-portal/api/swagger-reference.page.yaml
+    page: developer-portal/index.mdx
 
   - label: Get test account
     href: https://checkout.com/get-test-account

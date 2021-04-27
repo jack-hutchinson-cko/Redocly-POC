@@ -1,0 +1,51 @@
+---
+id: disputes
+title: Disputes
+---
+
+import { Link } from '../../../components';
+
+# Disputes
+
+You can find a list of request body parameters and possible outcomes <Link to="https://api-reference.checkout.com/#tag/Disputes">here</Link>.
+
+## Get disputes
+
+```js
+const disputes = await cko.disputes.get({
+    limit: 5,
+    id: 'dsp_bc94ebda8d275i461229'
+});
+```
+
+## Get dispute details
+
+```js
+const disputeDetails = await cko.disputes.getDetails('dsp_bc94ebda8d275i461229');
+```
+
+## Accept dispute
+
+```js
+const accept = await cko.disputes.accept('dsp_bc94ebda8d275i461229');
+```
+
+## Provide dispute evidence
+
+```js
+const evidence = await cko.disputes.provideEvidence('dsp_bc94ebda8d275i461229', {
+    proof_of_delivery_or_service_text: 'http://checkout.com/document.pdf'
+});
+```
+
+## Get dispute evidence
+
+```js
+const getEvidence = await cko.disputes.getEvidence('dsp_bc94ebda8d275i461229');
+```
+
+## Submit dispute evidence
+
+```js
+const submitEvidence = await cko.disputes.submit('dsp_bc94ebda8d275i461229');
+```

@@ -1,0 +1,34 @@
+---
+id: files
+title: Files
+---
+
+import { Link } from '../../../components';
+
+# Files
+
+You can find a list of request body parameters and possible outcomes <Link to="http://localhost:3000/#tag/Disputes/paths/~1files/post">here</Link>.
+
+## Upload file
+
+```js
+const file = await cko.files.upload({
+    file: fs.createReadStream('./test/files/evidence.jpg'),
+    purpose: 'dispute_evidence',
+});
+```
+
+## Upload file from remote
+
+```js
+const file = await cko.files.upload({
+    file: 'https://example.com/file.pdf',
+    purpose: 'dispute_evidence',
+});
+```
+
+## Get file information
+
+```js
+const getFile = await cko.files.getFile('file_zna32sccqbwevd3ldmejtplbhu');
+```

@@ -1,0 +1,31 @@
+---
+id: hosted-payments
+title: Hosted Payments
+---
+import { Link } from '../../../components';
+
+# Hosted Payments
+
+You can find a list of request body parameters and possible outcomes <Link to="https://api-reference.checkout.com/#tag/Hosted-Payments">here</Link>.
+
+## Create a hosted page
+
+```js
+const hosted = await cko.hostedPayments.create({
+    amount: 10,
+    currency: 'USD',
+    billing: {
+        address: {
+            address_line1: 'Checkout.com',
+            address_line2: '90 Tottenham Court Road',
+            city: 'London',
+            state: 'London',
+            zip: 'W1T 4TJ',
+            country: 'GB',
+        },
+    },
+    success_url: 'https://example.com/success',
+    cancel_url: 'https://example.com/cancel',
+    failure_url: 'https://example.com/failure',
+});
+```

@@ -1,0 +1,19 @@
+---
+title: Request a card payment
+---
+
+
+import Information from '../../components/Information';
+
+# Request a card payment
+
+Once you've successfully set up your integration, you're able to start receiving and tokenizing your customers' card details. After this tokenization process, you're ready to create a payment. To do this, you can use our API and your server-side code.
+
+<Information type="tip">
+    Card tokens (<code>tok_</code>) are single use and only have a 15-minute lifespan. Once you've successfully sent your request, you'll receive a response containing a permanent card source ID (<code>src_</code>) which can be used in subsequent payment requests.
+</Information>
+
+## Request a card payment
+
+### The POST request
+Use the details below to set up your request.

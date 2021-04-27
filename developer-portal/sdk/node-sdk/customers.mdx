@@ -1,0 +1,18 @@
+---
+id: customers
+title: Customers
+---
+
+import { Link } from '../../../components';
+
+# Customers
+
+You can find a list of request body parameters and possible outcomes <Link to="https://api-reference.checkout.com/#tag/Customers">here</Link>.
+
+## Update a customer
+
+```js
+const customerResponse = await cko.customers.update('cus_2tvaccfvs3lulevzg42vgyvtdq', {
+    name: 'James Bond',
+});
+```

@@ -1,0 +1,34 @@
+---
+id: instruments
+title: Instruments
+---
+
+import { Link } from '../../../components';
+
+# Instruments 
+
+You can find a list of request body parameters and possible outcomes <Link to="https://api-reference.checkout.com/#tag/Instruments">here</Link>.
+
+The SDK will infer the type of the instrument, if not provided.
+
+## Request a card instrument
+
+```js
+const instrument = await cko.instruments.create({
+    token: 'tok_bzi43qc6jeee5mmnfo4gnsnera', // token obtainer form Checkout.Frames of the mobile SDKs
+});
+```
+
+## Get an instrument
+
+```js
+const instrument = await cko.instruments.get('src_udfsqsgpjykutgs26fiejgizau');
+```
+
+## Update an instrument
+
+```js
+const instrumentResponse = await cko.instruments.update('src_udfsqsgpjykutgs26fiejgizau', {
+    expiry_year: 2030,
+});
+```
