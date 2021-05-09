@@ -44,6 +44,7 @@ export const StyledText = styled.p`
 	display: flex;
 	align-items: center;
 	font-size: 14px;
+	font-weight: 300;
 	gap: 8px;
 	margin: 8px 0 0;
 	text-decoration: none;

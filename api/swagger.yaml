@@ -277,7 +277,7 @@ paths:
       description: |
         Adds supporting evidence to a dispute. Before using this endpoint, you first need to [upload your files](#tag/Disputes/paths/~1files/post) using the file uploader. You will receive a file id (prefixed by `file_`) which you can then use in your request.
         Note that this only attaches the evidence to the dispute, it does not send it to us. Once ready, you will need to submit it.
-
+    
         **You must provide at least one evidence type in the body of your request.**
       parameters:
         - in: path
@@ -303,7 +303,7 @@ paths:
           description: Dispute not found
         '422':
           description: Unprocessable entity
-
+    
       x-code-samples:
         - lang: C#
           source: "var api = CheckoutApi.Create(\"your secret key\");\n\nvar disputeEvidence = new DisputeEvidence()\n{\n    {\"additional_evidence_file\", \"file_jmbfgkjromvcrn9t4qu4\" },\n    {\"additional_evidence_text\", \"provide dispute evidence test\" }\n};\n\nawait api.Disputes.ProvideDisputeEvidenceAsync(\n                    id: \"dsp_bc94ebda8d275i461229\",\n                    disputeEvidence: disputeEvidence\n                );"
@@ -337,7 +337,7 @@ paths:
           description: Unauthorized
         '404':
           description: Dispute not found
-
+    
       x-code-samples:
         - lang: C#
           source: "var api = CheckoutApi.Create(\"your secret key\");\n\nvar getDisputeEvidenceResponse = await api.Disputes.GetDisputeEvidenceAsync(id: \"dsp_bc94ebda8d275i461229\");"
@@ -656,7 +656,7 @@ paths:
       operationId: createAHostedPaymentsSession
       description: |
         Create a Hosted Payments Page session and pass through all the payment information, like the amount, currency, country and reference.
-
+    
         To get started with our Hosted Payments Page, contact your Solutions Engineer or integration@checkout.com.
       requestBody:
         required: true
@@ -748,7 +748,7 @@ paths:
           description: Unauthorized
         '404':
           description: Instrument not found
-
+    
     patch:
       security:
         - ApiSecretKey: []
@@ -834,9 +834,9 @@ paths:
       operationId: requestAPaymentOrPayout
       description: |
         To accept payments from <a href="https://docs.checkout.com/payment-methods/cards" target="blank">cards</a>, <a href="https://docs.checkout.com/payment-methods/wallets" target="blank">digital wallets</a> and many <a href="https://docs.checkout.com/payment-methods/" target="blank">alternative payment methods</a>, specify the `source.type` field, along with the source-specific data.
-
+    
         To <a href="https://docs.checkout.com/payment-actions/pay-out-to-a-card" target="blank">pay out to a card</a>, specify the destination of your payout using the `destination.type` field, along with the destination-specific data.
-
+    
         To verify the success of the payment, check the `approved` field in the response.
       parameters:
         - $ref: '#/components/parameters/ckoIdempotencyKey'
@@ -897,7 +897,7 @@ paths:
               metadata:
                 coupon_code: 'NY2018'
                 partner_id: 123989
-
+    
       responses:
         '201':
           description: Payment processed successfully
@@ -1009,11 +1009,11 @@ paths:
       operationId: getPaymentDetails
       description: |
         Returns the details of the payment with the specified identifier string.
-
+    
         If the payment method requires a redirection to a third party (e.g., 3D Secure),
         the redirect URL back to your site will include a `cko-session-id` query parameter
         containing a payment session ID that can be used to obtain the details of the payment, for example:
-
+    
         http://example.com/success?cko-session-id=sid_ubfj2q76miwundwlk72vxt2i7q.
       parameters:
         - in: path
@@ -1105,7 +1105,7 @@ paths:
       operationId: captureAPayment
       description: |
         Captures a payment if supported by the payment method.
-
+    
         For card payments, capture requests are processed asynchronously. You can use [webhooks](#tag/Webhooks) to be notified if the capture is successful.
       parameters:
         - $ref: '#/components/parameters/ckoIdempotencyKey'
@@ -1168,7 +1168,7 @@ paths:
       operationId: refundAPayment
       description: |
         Refunds a payment if supported by the payment method.
-
+    
         For card payments, refund requests are processed asynchronously. You can use [webhooks](#tag/Webhooks) to be notified if the refund is successful.
       parameters:
         - $ref: '#/components/parameters/ckoIdempotencyKey'
@@ -1231,7 +1231,7 @@ paths:
       operationId: voidAPayment
       description: |
         Voids a payment if supported by the payment method.
-
+    
         For card payments, void requests are processed asynchronously. You can use [webhooks](#tag/Webhooks) to be notified if the void is successful.
       parameters:
         - $ref: '#/components/parameters/ckoIdempotencyKey'
@@ -1288,7 +1288,7 @@ paths:
     servers:
       - url: https://api.checkout.com
         description: Live API
-
+    
     get:
       security:
         - ApiSecretKey: []
@@ -1299,7 +1299,7 @@ paths:
       description: Returns a JSON report containing all payments within your specified parameters.
         You can reconcile the data from this report against your statements (which can be found in the <a href="https://hub.checkout.com/login" target="_blank">Hub</a>), the list of payments in the Hub (using the `Reference` field) or your own systems.
         *Note:* no payments from before 7 February 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view earlier payments, please contact our support team.
-
+    
       parameters:
         - in: query
           name: from
@@ -1329,7 +1329,7 @@ paths:
             default: 200
           required: false
           description: Sets a limit on the number of results
-
+    
       responses:
         '200':
           description: Payments report retrieved successfully
@@ -1354,7 +1354,7 @@ paths:
     servers:
       - url: https://api.checkout.com
         description: Live API
-
+    
     get:
       security:
         - ApiSecretKey: []
@@ -1365,7 +1365,7 @@ paths:
       description:
         Returns a JSON payment report containing all of the data related to a specific payment, based on the payment's identifier.
         *Note:* no payments from before 7 February 2019 at 00.00.00 UTC will appear when using the payments endpoint. To view earlier payments, please contact our support team.
-
+    
       parameters:
         - in: path
           name: paymentId
@@ -1374,7 +1374,7 @@ paths:
             pattern: "^(pay)_(\\w{26})$"
           required: true
           description: The unique payment identifier
-
+    
       responses:
         '200':
           description: Payment report returned successfully
@@ -1399,7 +1399,7 @@ paths:
     servers:
       - url: https://api.checkout.com
         description: Live API
-
+    
     get:
       security:
         - ApiSecretKey: []
@@ -1432,7 +1432,7 @@ paths:
     servers:
       - url: https://api.checkout.com
         description: Live API
-
+    
     get:
       security:
         - ApiSecretKey: []
@@ -1441,7 +1441,7 @@ paths:
       summary: Get JSON statements report
       operationId: getJsonStatementsReport
       description: Returns a JSON report containing all statements within your specified parameters. Please note that the timezone for the request will be UTC.
-
+    
       parameters:
         - in: query
           name: from
@@ -1457,7 +1457,7 @@ paths:
             format: date-time
           required: false
           description: Date and time until which to search for statements
-
+    
       responses:
         '200':
           description: Statements report successfully retrieved
@@ -1482,7 +1482,7 @@ paths:
     servers:
       - url: https://api.checkout.com
         description: Live API
-
+    
     get:
       security:
         - ApiSecretKey: []
@@ -1506,7 +1506,7 @@ paths:
     servers:
       - url: https://api.checkout.com
         description: Live API
-
+    
     get:
       security:
         - ApiSecretKey: []
@@ -1529,7 +1529,7 @@ paths:
       description: |
         Add a reusable payment source, like a <a href="https://docs.checkout.com/payment-methods/direct-debit/sepa-direct-debit" target="blank">SEPA Direct Debit</a>, that you can later use to make one or more payments.
         Payment sources are linked to a specific customer and cannot be shared between customers.
-
+    
       requestBody:
         content:
           application/json:
@@ -1575,9 +1575,9 @@ paths:
       description: |
         Exchange a digital wallet payment token or card details for a reference token that can be used later to request a card payment. Tokens are single use and expire after 15 minutes. 
         To create a token, please authenticate using your public key. 
-
+    
         **Please note:** You should only use the `card` type for testing purposes.
-
+    
       requestBody:
         content:
           application/json:
@@ -1639,7 +1639,7 @@ paths:
           description: No webhooks configured
         '401':
           description: Unauthorized
-
+    
       x-code-samples:
         - lang: C#
           source: "var api = CheckoutApi.Create(\"your secret key\");\n\nvar webhooksRetrievalResponse = await api.Webhooks.RetrieveWebhooksAsync();"
@@ -1725,7 +1725,7 @@ paths:
           description: Unauthorized
         '404':
           description: Webhook not found
-
+    
       x-code-samples:
         - lang: C#
           source: "var api = CheckoutApi.Create(\"your secret key\");\n\nvar webhookRetrievalResponse = await api.Webhooks.RetrieveWebhookAsync(\"wh_tdt72zlbe7cudogxdgit6nwk6i\");"
@@ -1776,7 +1776,7 @@ paths:
           description: Webhook not found
         '409':
           description: URL already registered for another webhook
-
+    
       x-code-samples:
         - lang: C#
           source: "var api = CheckoutApi.Create(\"your secret key\");\n\nvar updatedWebhook = new Webhook()\n{\n  Url = \"https://example.com/webhooks/updated\",\n  EventTypes = new List<string>\n    {\n        \"payment_pending\",\n        \"payment_captured\"\n    },\n  Headers = new Dictionary<string, string>\n    {\n        { \"Authorization\", \"1234\" }\n    }\n};\n\nvar webhookUpdateResponse = await api.Webhooks.UpdateWebhookAsync(\n                                    \"wh_ahun3lg7bf4e3lohbhni65335u\",\n                                    new UpdateWebhookRequest(updatedWebhook)\n                                  );"
@@ -1831,7 +1831,7 @@ paths:
           description: Webhook not found
         '409':
           description: URL already exists in another webhook configuration
-
+    
       x-code-samples:
         - lang: C#
           source: "var api = CheckoutApi.Create(\"your secret key\");\n\n// Original webhook\nvar webhook = new Webhook()\n{\n  Url = \"https://example.com/webhooks\",\n  EventTypes = new List<string>\n    {\n        \"payment_pending\",\n        \"payment_captured\"\n    },\n  Headers = new Dictionary<string, string>\n    {\n        { \"Authorization\", \"1234\" }\n    }\n};\nvar webhookRegistrationResponse = await Api.Webhooks.RegisterWebhookAsync(new RegisterWebhookRequest(webhook));\n\n// Partially update\nwebhook.Url += \"/partially/updated\";\nwebhook.Headers = null;\nvar webhookPartialUpdateResponse = await Api.Webhooks.PartiallyUpdateWebhookAsync(\n                                                        webhookRegistrationResponse.Id,\n                                                        new PartialUpdateWebhookRequest(webhook)\n                                                      );"
@@ -4260,7 +4260,7 @@ components:
           description: |
             A timestamp (ISO 8601 code) that determines when the payment should be captured.
             Providing this field will automatically set `capture` to true
-
+      
           allOf:
             - $ref: '#/components/schemas/Timestamp'
         customer:
@@ -4641,7 +4641,7 @@ components:
     PaymentResponseSource:
       type: object
       description: Payment source
-
+      
       discriminator:
         propertyName: type
         mapping:
@@ -4668,7 +4668,7 @@ components:
           sofort: '#/components/schemas/PaymentResponseSofortSource'
       required:
         - type
-
+      
       properties:
         type:
           type: string
@@ -4740,7 +4740,7 @@ components:
           description: |
             A timestamp (ISO 8601 code) that determines when the payment should be captured.
             Providing this field will automatically set `capture` to true
-
+      
           allOf:
             - $ref: '#/components/schemas/Timestamp'
         customer:
@@ -5878,7 +5878,7 @@ components:
               example:
                 ota_type: 'airline'
                 ota_start_city: 'SKG'
-
+      
             #TODO These are all fields supported by the legacy API but not by UPAPI (yet)
             #order:
             #  type: boolean
@@ -8252,13 +8252,13 @@ components:
       description: >
         Unless explicitly stated, all endpoints require authentication using your secret key. 
         Public keys should only be used in JavaScript or native applications. 
-
+      
         You can find your API keys, and generate new ones, in your <a href="https://hub.checkout.com/login" target="blank">Hub account</a>.
-
+      
         #### Format
-
+      
         - Sandbox `pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxx`
-
+      
         - Production `pk_xxxxxxxxxxxxxxxxxxxxxxxxxx`
       name: Authorization
       type: apiKey
@@ -8267,13 +8267,13 @@ components:
       description: >
         Unless explicitly stated, all endpoints require authentication using your secret key. 
         Public keys should only be used in JavaScript or native applications. 
-
+      
         You can find your API keys, and generate new ones, in your <a href="https://hub.checkout.com/login" target="blank">Hub account</a>.
-
+      
         #### Format
-
+      
         - Sandbox `sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxx`
-
+      
         - Production `sk_xxxxxxxxxxxxxxxxxxxxxxxxxx`
       name: Authorization
       type: apiKey

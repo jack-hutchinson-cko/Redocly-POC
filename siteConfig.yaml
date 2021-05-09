@@ -5,7 +5,7 @@ meta:
 headerIcon: ./assets/images/logo.svg
 enableToc: true
 oasDefinitions:
-  checkout: ./developer-portal/api/swagger.yaml
+  checkout: ./api/swagger.yaml
 
 stylesheets:
   - ./assets/global.css
@@ -13,11 +13,3 @@ ga:
   trackingId: UA-83886670-8
 scripts:
   - ./scripts/hotjar.js
-
-nav:
-  - search: true
-  - label: Log in
-    page: developer-portal/index.mdx
-
-  - label: Get test account
-    href: https://checkout.com/get-test-account

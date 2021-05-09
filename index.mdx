@@ -23,30 +23,12 @@ export default LandingLayout;
 
 <div>
   <NavBar location={props.location} standalone={false} />
-  <H1 style={{display: 'flex', justifyContent: 'center'}}>Checkout.com API Reference</H1>
+  <H1 style={{display: 'flex', justifyContent: 'center'}}>
+    Checkout.com API Reference
+  </H1>
   <Flex p={20} justifyContent="center">
-    <ButtonLink to="developer-portal/docs/">
+    <ButtonLink to="api/">
       Get started
     </ButtonLink>
   </Flex>
 </div>
-<Box my={25}>
-  <SectionHeader>
-    Get integrated with us today!
-  </SectionHeader>
-  <FlexSection justifyContent="space-around" flexWrap="wrap">
-    <Card to="developer-portal/sdk/ruby-sdk/getting_started.mdx" title="Ruby">
-       Come check out Checkout.com's Ruby SDK
-    </Card>
-    <Card to="developer-portal/sdk/node-sdk/getting_started.mdx" title="Node">
-         NodeJS SDK for all you javascript nerds
-    </Card>
-    <Card to="developer-portal/sdk/java-sdk/getting_started.mdx" title="Java">
-       You use Java? Weird but okay... here's the Java SDK
-    </Card>
-  </FlexSection>
-  <SectionHeader>
-    <Emphasis>Need help? </Emphasis>
-    Try our training exercises.
-  </SectionHeader>
-</Box>

@@ -11,9 +11,9 @@ namespace openApiGenerator
     class Program
     {
         static string _outputDirectory = "output";
-        static string _specDirectory = "developer-portal/spec";
-        static string _yamlOutputFile = "developer-portal/api/swagger.yaml";
-        static string _jsonOutputFile = "developer-portal/api/swagger.json";
+        static string _specDirectory = "spec";
+        static string _yamlOutputFile = "api/swagger.yaml";
+        static string _jsonOutputFile = "api/swagger.json";
         static List<CodeSample> _codeSamples = new List<CodeSample>();
         static string[] httpVerbs = new[] { "get", "put", "post", "delete", "options", "head", "patch", "trace" };
 
